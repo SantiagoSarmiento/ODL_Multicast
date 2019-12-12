@@ -1,0 +1,6 @@
+org/sdnhub/odl/tutorial/utils/openflow13/ActionUtils.class
+org/sdnhub/odl/tutorial/utils/openflow13/MatchUtils.class
+org/sdnhub/odl/tutorial/utils/openflow13/InstructionUtils.class
+org/sdnhub/odl/tutorial/utils/PacketParsingUtils.class
+org/sdnhub/odl/tutorial/utils/inventory/InventoryUtils.class
+org/sdnhub/odl/tutorial/utils/GenericTransactionUtils.class

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>tapapp-impl</title>
+  </head>
+  <body>
+    <h1>tapapp-impl</h1>
+    
+    <h2>Base Information</h2>
+    <table>
+        <tr>
+            <td><strong>prefix</strong></td>
+            <td>tapapp-impl</td>
+        </tr>
+        <tr>
+            <td><strong>namespace</strong></td>
+            <td>urn:sdnhub:odl:tutorial:tapapp:tapapp-impl</td>
+        </tr>
+        <tr>
+            <td><strong>revision</strong></td>
+            <td>2015-06-04</td>
+        </tr>
+        <tr>
+            <td><strong>description</strong></td>
+            <td>This module contains the base YANG definitions for tapapp-impl.</td>
+        </tr>
+        <tr>
+            <td><strong>yang-version</strong></td>
+            <td>1</td>
+        </tr>
+        <tr>
+    <td><strong>imports</strong></td><td>        mdsal:opendaylight-md-sal-binding 2013-10-28;
+            config:config 2013-04-05;
+    </td>    </tr>
+    </table>
+    
+    <h3>Identities Summary</h3>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>
+            <a href="#tapapp-impl"><strong>tapapp-impl</strong></a>
+            </td>
+            <td>
+            </td>
+        </tr>
+    </table>
+    <h3>Augmentations Summary</h3>
+    <table>
+        <tr>
+            <th>Target</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>
+            <a href="#/config:modules/config:module/config:configuration/(case)tapapp-impl"><strong>/config:modules/config:module/config:configuration/(case)tapapp-impl</strong></a>
+            </td>
+            <td>
+            </td>
+        </tr>
+    </table>
+    
+    
+    <h2>Identities</h2>
+    <ul>
+    <li>
+        <h3 id="tapapp-impl">tapapp-impl</h3>
+        <ul>
+        <li>
+            base: module-type
+        </li>
+        </ul>
+    </li>
+    </ul>
+    
+    
+    
+    
+    
+    <h2>Augmentations</h2>
+    
+    <ul>
+    <li>
+        <h3 id="/config:modules/config:module/config:configuration/(case)tapapp-impl">
+        Target [(urn:opendaylight:params:xml:ns:yang:controller:config)/config:modules/config:module/config:configuration/(case)tapapp-impl]</h3>
+            Status: <strong>CURRENT</strong>
+        <ul>
+        <strong>
+        <li id="modules/module/configuration/tapapp-impl">
+            case: tapapp-impl
+        </li>
+        </strong>
+        <ul>
+        <li>
+            when condition: /config:modules/config:module/config:type = 'tapapp-impl'
+        </li>
+        </ul>
+        <ul>
+        </ul>
+        <ul>
+        </ul>
+        <ul>
+        </ul>
+        <ul>
+        <ul>
+        <strong>
+        <li id="modules/module/configuration/tapapp-impl/data-broker">
+            container: data-broker
+        </li>
+        </strong>
+        <ul>
+        </ul>
+        <ul>
+        <strong><li>
+            uses: (urn:opendaylight:params:xml:ns:yang:controller:config)service-ref
+        </li>
+        </strong>
+        <ul>
+        <li>refines:
+            <ul>
+            <li>
+                node name: type
+            </li>
+            </ul>
+        </li>
+        </ul>
+        </ul>
+        <ul>
+        </ul>
+        <ul>
+        </ul>
+        <ul>
+        <ul>
+        <strong><li>
+            leaf: type
+        </li>
+        </strong>
+        <ul>
+        <li>
+            description: Type of the service being referenced. Users of this grouping
+                             should refine this leaf with required-identity pointing to
+                             the actual service-type which is actually required.
+        </li>
+        <li>
+            type: (urn:ietf:params:xml:ns:yang:1)leafref
+        </li>
+        </ul>
+        </ul>
+        <ul>
+        <strong><li>
+            leaf: name
+        </li>
+        </strong>
+        <ul>
+        <li>
+            type: (urn:ietf:params:xml:ns:yang:1)leafref
+        </li>
+        </ul>
+        </ul>
+        </ul>
+        </ul>
+        <ul>
+        <strong>
+        <li id="modules/module/configuration/tapapp-impl/notification-service">
+            container: notification-service
+        </li>
+        </strong>
+        <ul>
+        </ul>
+        <ul>
+        <strong><li>
+            uses: (urn:opendaylight:params:xml:ns:yang:controller:config)service-ref
+        </li>
+        </strong>
+        <ul>
+        <li>refines:
+            <ul>
+            <li>
+                node name: type
+            </li>
+            </ul>
+        </li>
+        </ul>
+        </ul>
+        <ul>
+        </ul>
+        <ul>
+        </ul>
+        <ul>
+        <ul>
+        <strong><li>
+            leaf: type
+        </li>
+        </strong>
+        <ul>
+        <li>
+            description: Type of the service being referenced. Users of this grouping
+                             should refine this leaf with required-identity pointing to
+                             the actual service-type which is actually required.
+        </li>
+        <li>
+            type: (urn:ietf:params:xml:ns:yang:1)leafref
+        </li>
+        </ul>
+        </ul>
+        <ul>
+        <strong><li>
+            leaf: name
+        </li>
+        </strong>
+        <ul>
+        <li>
+            type: (urn:ietf:params:xml:ns:yang:1)leafref
+        </li>
+        </ul>
+        </ul>
+        </ul>
+        </ul>
+        <ul>
+        <strong>
+        <li id="modules/module/configuration/tapapp-impl/rpc-registry">
+            container: rpc-registry
+        </li>
+        </strong>
+        <ul>
+        </ul>
+        <ul>
+        <strong><li>
+            uses: (urn:opendaylight:params:xml:ns:yang:controller:config)service-ref
+        </li>
+        </strong>
+        <ul>
+        <li>refines:
+            <ul>
+            <li>
+                node name: type
+            </li>
+            </ul>
+        </li>
+        </ul>
+        </ul>
+        <ul>
+        </ul>
+        <ul>
+        </ul>
+        <ul>
+        <ul>
+        <strong><li>
+            leaf: type
+        </li>
+        </strong>
+        <ul>
+        <li>
+            description: Type of the service being referenced. Users of this grouping
+                             should refine this leaf with required-identity pointing to
+                             the actual service-type which is actually required.
+        </li>
+        <li>
+            type: (urn:ietf:params:xml:ns:yang:1)leafref
+        </li>
+        </ul>
+        </ul>
+        <ul>
+        <strong><li>
+            leaf: name
+        </li>
+        </strong>
+        <ul>
+        <li>
+            type: (urn:ietf:params:xml:ns:yang:1)leafref
+        </li>
+        </ul>
+        </ul>
+        </ul>
+        </ul>
+        </ul>
+        </ul>
+        
+        <h3>Example</h3>
+        <pre>
+        </pre>
+    </li>
+    </ul>
+    
+    
+    
+    
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features name="tutorial-features-1.0.0-SNAPSHOT" xmlns="http://karaf.apache.org/xmlns/features/v1.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://karaf.apache.org/xmlns/features/v1.2.0 http://karaf.apache.org/xmlns/features/v1.2.0">
+    <repository>mvn:org.opendaylight.controller/features-base/1.5.0-Lithium/xml/features</repository>
+    <repository>mvn:org.opendaylight.controller/features-mdsal/1.2.0-Lithium/xml/features</repository>
+    <repository>mvn:org.opendaylight.controller/features-restconf/1.2.0-Lithium/xml/features</repository>
+    <repository>mvn:org.opendaylight.openflowplugin/features-openflowplugin/0.1.0-Lithium/xml/features</repository>
+
+    <feature name="sdnhub-tutorial-tapapp" description="SDN Hub Tutorial :: OpenDaylight :: Tap application" version='1.0.0-SNAPSHOT'>
+        <feature version="0.1.0-Lithium">odl-openflowplugin-southbound</feature>
+        <feature version="0.1.0-Lithium">odl-openflowplugin-flow-services</feature>
+        <feature version="1.2.0-Lithium">odl-mdsal-broker</feature>
+        <bundle>mvn:org.sdnhub.odl.tutorial.tapapp/tapapp-impl/1.0.0-SNAPSHOT</bundle>
+        <bundle>mvn:org.sdnhub.odl.tutorial.tapapp/tapapp-model/1.0.0-SNAPSHOT</bundle>
+        <configfile finalname="etc/opendaylight/karaf/50-tapapp-config.xml">mvn:org.sdnhub.odl.tutorial.tapapp/tapapp-config/1.0.0-SNAPSHOT/xml/config</configfile>
+    </feature>
+
+    <feature name="sdnhub-tutorial-learning-switch" description="SDN Hub Tutorial :: OpenDaylight :: Learning switch" version='1.0.0-SNAPSHOT'>
+        <feature version="0.1.0-Lithium">odl-openflowplugin-southbound</feature>
+        <feature version="0.1.0-Lithium">odl-openflowplugin-flow-services</feature>
+        <feature version="1.2.0-Lithium">odl-mdsal-broker</feature>
+        <bundle>mvn:org.sdnhub.odl.tutorial.learning-switch/learning-switch-impl/1.0.0-SNAPSHOT</bundle>
+        <configfile finalname="etc/opendaylight/karaf/49-learning-switch-config.xml">mvn:org.sdnhub.odl.tutorial.learning-switch/learning-switch-config/1.0.0-SNAPSHOT/xml/config</configfile>
+    </feature>
+</features>

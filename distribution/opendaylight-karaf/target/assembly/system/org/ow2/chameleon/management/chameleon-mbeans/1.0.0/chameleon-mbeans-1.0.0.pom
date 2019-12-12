@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Copyright 2009 OW2 Chameleon
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <artifactId>parent-pom</artifactId>
+    <groupId>org.ow2.chameleon</groupId>
+    <version>0.3.2</version>
+  </parent>
+
+  <groupId>org.ow2.chameleon.management</groupId>
+  <artifactId>chameleon-mbeans</artifactId>
+  <version>1.0.0</version>
+  <packaging>bundle</packaging>
+
+  <name>OW2 Chameleon - chameleon-mbeans</name>
+  <url>http://wiki.chameleon.ow2.org/xwiki/bin/view/Main/AdminTools</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>org.osgi.core</artifactId>
+      <version>4.0.0</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+  
+  <scm>
+    <connection>scm:svn:svn+ssh://svn.forge.objectweb.org/svnroot/chameleon/releases/chameleon-mbeans-1.0.0</connection>
+    <developerConnection>scm:svn:svn+ssh://svn.forge.objectweb.org/svnroot/chameleon/releases/chameleon-mbeans-1.0.0</developerConnection>
+    <url>scm:svn:svn+ssh://svn.forge.objectweb.org/svnroot/chameleon/releases/chameleon-mbeans-1.0.0</url>
+  </scm>
+  
+  <build>
+      <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.5</source>
+          <target>1.5</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <extensions>true</extensions>
+        <configuration>
+          <instructions>
+            <Bundle-Description>Management beans for the OSGi platform</Bundle-Description>
+            <Bundle-Activator>org.ow2.chameleon.management.beans.impl.Activator</Bundle-Activator>
+            <Bundle-Vendor>OW2 Chameleon</Bundle-Vendor>
+            <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+            <Export-Package>${project.groupId}.beans, ${project.groupId}.beans.impl</Export-Package>
+          </instructions>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<application xmlns="http://wadl.dev.java.net/2009/02" xmlns:inv="urn:opendaylight:inventory"
+xmlns:ext="urn:opendaylight:yang:extension:yang-ext"
+xmlns:inet="urn:ietf:params:xml:ns:yang:ietf-inet-types"
+xmlns:yang="urn:ietf:params:xml:ns:yang:ietf-yang-types"
+ xmlns:tap="urn:sdnhub:tutorial:odl:tap">
+
+	<grammars>
+		<include href="tap.yang"/>
+		<include href="opendaylight-inventory.yang"/>
+		<include href="yang-ext.yang"/>
+		<include href="ietf-inet-types.yang"/>
+		<include href="ietf-yang-types.yang"/>
+	</grammars>
+	
+	<resources base="http://localhost:9998/restconf">
+		<resource path="config">
+			<method name="POST">
+				<request>
+					<representation mediaType="application/xml" element="tap-spec"/>
+					<representation mediaType="text/xml" element="tap-spec"/>
+					<representation mediaType="application/json" element="tap-spec"/>
+					<representation mediaType="application/yang.data+xml" element="tap-spec"/>
+					<representation mediaType="application/yang.data+json" element="tap-spec"/>
+				</request>
+			</method>
+			<resource path="tap:tap-spec">
+				<method name="GET">
+					<response>
+						<representation mediaType="application/xml" element="tap-spec"/>
+						<representation mediaType="text/xml" element="tap-spec"/>
+						<representation mediaType="application/json" element="tap-spec"/>
+						<representation mediaType="application/yang.data+xml" element="tap-spec"/>
+						<representation mediaType="application/yang.data+json" element="tap-spec"/>
+					</response>
+				</method>
+				<method name="DELETE" />
+				<method name="PUT">
+					<request>
+						<representation mediaType="application/xml" element="tap-spec"/>
+						<representation mediaType="text/xml" element="tap-spec"/>
+						<representation mediaType="application/json" element="tap-spec"/>
+						<representation mediaType="application/yang.data+xml" element="tap-spec"/>
+						<representation mediaType="application/yang.data+json" element="tap-spec"/>
+					</request>
+				</method>
+				<method name="POST">
+					<request>
+						<representation mediaType="application/xml" element="tap"/>
+						<representation mediaType="text/xml" element="tap"/>
+						<representation mediaType="application/json" element="tap"/>
+						<representation mediaType="application/yang.data+xml" element="tap"/>
+						<representation mediaType="application/yang.data+json" element="tap"/>
+					</request>
+				</method>
+				<resource path="tap/{id}">
+					<param required="true" style="template" name="id" type="string"/>
+					<method name="GET">
+						<response>
+							<representation mediaType="application/xml" element="tap"/>
+							<representation mediaType="text/xml" element="tap"/>
+							<representation mediaType="application/json" element="tap"/>
+							<representation mediaType="application/yang.data+xml" element="tap"/>
+							<representation mediaType="application/yang.data+json" element="tap"/>
+						</response>
+					</method>
+					<method name="DELETE" />
+					<method name="PUT">
+						<request>
+							<representation mediaType="application/xml" element="tap"/>
+							<representation mediaType="text/xml" element="tap"/>
+							<representation mediaType="application/json" element="tap"/>
+							<representation mediaType="application/yang.data+xml" element="tap"/>
+							<representation mediaType="application/yang.data+json" element="tap"/>
+						</request>
+					</method>
+					<method name="POST">
+						<request>
+							<representation mediaType="application/xml" element="mac-address-match"/>
+							<representation mediaType="text/xml" element="mac-address-match"/>
+							<representation mediaType="application/json" element="mac-address-match"/>
+							<representation mediaType="application/yang.data+xml" element="mac-address-match"/>
+							<representation mediaType="application/yang.data+json" element="mac-address-match"/>
+						</request>
+					</method>
+					<method name="POST">
+						<request>
+							<representation mediaType="application/xml" element="ip-address-match"/>
+							<representation mediaType="text/xml" element="ip-address-match"/>
+							<representation mediaType="application/json" element="ip-address-match"/>
+							<representation mediaType="application/yang.data+xml" element="ip-address-match"/>
+							<representation mediaType="application/yang.data+json" element="ip-address-match"/>
+						</request>
+					</method>
+					<resource path="mac-address-match">
+						<method name="GET">
+							<response>
+								<representation mediaType="application/xml" element="mac-address-match"/>
+								<representation mediaType="text/xml" element="mac-address-match"/>
+								<representation mediaType="application/json" element="mac-address-match"/>
+								<representation mediaType="application/yang.data+xml" element="mac-address-match"/>
+								<representation mediaType="application/yang.data+json" element="mac-address-match"/>
+							</response>
+						</method>
+						<method name="DELETE" />
+						<method name="PUT">
+							<request>
+								<representation mediaType="application/xml" element="mac-address-match"/>
+								<representation mediaType="text/xml" element="mac-address-match"/>
+								<representation mediaType="application/json" element="mac-address-match"/>
+								<representation mediaType="application/yang.data+xml" element="mac-address-match"/>
+								<representation mediaType="application/yang.data+json" element="mac-address-match"/>
+							</request>
+						</method>
+					</resource>
+					<resource path="ip-address-match">
+						<method name="GET">
+							<response>
+								<representation mediaType="application/xml" element="ip-address-match"/>
+								<representation mediaType="text/xml" element="ip-address-match"/>
+								<representation mediaType="application/json" element="ip-address-match"/>
+								<representation mediaType="application/yang.data+xml" element="ip-address-match"/>
+								<representation mediaType="application/yang.data+json" element="ip-address-match"/>
+							</response>
+						</method>
+						<method name="DELETE" />
+						<method name="PUT">
+							<request>
+								<representation mediaType="application/xml" element="ip-address-match"/>
+								<representation mediaType="text/xml" element="ip-address-match"/>
+								<representation mediaType="application/json" element="ip-address-match"/>
+								<representation mediaType="application/yang.data+xml" element="ip-address-match"/>
+								<representation mediaType="application/yang.data+json" element="ip-address-match"/>
+							</request>
+						</method>
+					</resource>
+				</resource>
+			</resource>
+		</resource>
+	</resources>
+</application>

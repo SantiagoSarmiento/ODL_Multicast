@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>tap</title>
+  </head>
+  <body>
+    <h1>tap</h1>
+    
+    <h2>Base Information</h2>
+    <table>
+        <tr>
+            <td><strong>prefix</strong></td>
+            <td>tap</td>
+        </tr>
+        <tr>
+            <td><strong>namespace</strong></td>
+            <td>urn:sdnhub:tutorial:odl:tap</td>
+        </tr>
+        <tr>
+            <td><strong>revision</strong></td>
+            <td>2015-06-01</td>
+        </tr>
+        <tr>
+            <td><strong>description</strong></td>
+            <td>Tap configuration</td>
+        </tr>
+        <tr>
+            <td><strong>yang-version</strong></td>
+            <td>1</td>
+        </tr>
+        <tr>
+    <td><strong>imports</strong></td><td>        inv:opendaylight-inventory 2013-08-19;
+            ext:yang-ext 2013-07-09;
+            inet:ietf-inet-types;
+            yang:ietf-yang-types 2010-09-24;
+    </td>    </tr>
+    </table>
+    
+    <div>
+        <h3>Type Definitions Summary</h3>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>
+                <a href="#field-type"><strong>field-type</strong></a>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <a href="#port-number"><strong>port-number</strong></a>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <a href="#traffic-type"><strong>traffic-type</strong></a>
+                </td>
+                <td>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <h3>Groupings Summary</h3>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>
+            <a href="#tap-grouping"><strong>tap-grouping</strong></a>
+            </td>
+            <td>
+            </td>
+        </tr>
+    </table>
+    <h3>Augmentations Summary</h3>
+    <table>
+        <tr>
+            <th>Target</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>
+            <a href="#/tap:tap-spec/tap:tap/"><strong>/tap:tap-spec/tap:tap/</strong></a>
+            </td>
+            <td>
+            </td>
+        </tr>
+    </table>
+    <h3>Child Nodes Summary</h3>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>
+            <a href="#tap-spec"><strong>tap-spec</strong></a>
+            </td>
+            <td>
+            </td>
+        </tr>
+    </table>
+    
+    <h2>Type Definitions</h2>
+    <ul>
+    <li>
+        <h3 id="field-type">field-type</h3>
+        <ul>
+        <li>
+            Base type: (urn:ietf:params:xml:ns:yang:1)enumeration
+        </li>
+        </ul>
+    </li>
+    <li>
+        <h3 id="port-number">port-number</h3>
+        <ul>
+        <li>
+            Base type: (urn:ietf:params:xml:ns:yang:1)uint32
+        </li>
+        </ul>
+    </li>
+    <li>
+        <h3 id="traffic-type">traffic-type</h3>
+        <ul>
+        <li>
+            Base type: (urn:ietf:params:xml:ns:yang:1)enumeration
+        </li>
+        </ul>
+    </li>
+    </ul>
+    
+    
+    <h2>Groupings</h2>
+    <ul>
+    <li>
+        <h3 id="tap-grouping">tap-grouping</h3>
+        <ul>
+            <ul>
+            <strong><li>
+                leaf: node
+            </li>
+            </strong>
+            <ul>
+            <li>
+                type: (urn:ietf:params:xml:ns:yang:1)leafref
+            </li>
+            </ul>
+            </ul>
+            <ul>
+            <strong><li>
+                leaf-list: src-node-connector
+            </li>
+            </strong>
+            <ul>
+            <li>
+                min elements: 1
+            </li>
+            <li>
+                type: leafref
+            </li>
+            </ul>
+            </ul>
+            <ul>
+            <strong><li>
+                leaf-list: sink-node-connector
+            </li>
+            </strong>
+            <ul>
+            <li>
+                min elements: 1
+            </li>
+            <li>
+                type: leafref
+            </li>
+            </ul>
+            </ul>
+            <ul>
+            <strong>
+            <li id="tap-grouping/mac-address-match">
+                container: mac-address-match
+            </li>
+            </strong>
+            <ul>
+            </ul>
+            <ul>
+            </ul>
+            <ul>
+            </ul>
+            <ul>
+            </ul>
+            <ul>
+            <ul>
+            <strong><li>
+                leaf: type
+            </li>
+            </strong>
+            <ul>
+            <li>
+                type: <a href="#field-type">field-type</a>
+            </li>
+            </ul>
+            </ul>
+            <ul>
+            <strong><li>
+                leaf: value
+            </li>
+            </strong>
+            <ul>
+            <li>
+                type: (urn:ietf:params:xml:ns:yang:ietf-yang-types)mac-address
+            </li>
+            </ul>
+            </ul>
+            </ul>
+            </ul>
+            <ul>
+            <strong>
+            <li id="tap-grouping/ip-address-match">
+                container: ip-address-match
+            </li>
+            </strong>
+            <ul>
+            </ul>
+            <ul>
+            </ul>
+            <ul>
+            </ul>
+            <ul>
+            </ul>
+            <ul>
+            <ul>
+            <strong><li>
+                leaf: type
+            </li>
+            </strong>
+            <ul>
+            <li>
+                type: <a href="#field-type">field-type</a>
+            </li>
+            </ul>
+            </ul>
+            <ul>
+            <strong><li>
+                leaf: value
+            </li>
+            </strong>
+            <ul>
+            <li>
+                type: (urn:ietf:params:xml:ns:yang:ietf-inet-types)ipv4-prefix
+            </li>
+            </ul>
+            </ul>
+            </ul>
+            </ul>
+            <ul>
+            <strong><li>
+                leaf: traffic-match
+            </li>
+            </strong>
+            <ul>
+            <li>
+                type: <a href="#traffic-type">traffic-type</a>
+            </li>
+            </ul>
+            </ul>
+        </ul>
+    </li>
+    </ul>
+    
+    <h2>Datastore Structure</h2>
+    <strong>tap</strong>
+    <ul>
+    <li>
+        <a href="#tap-spec"><strong>tap-spec</strong>
+        </a>
+        <ul>
+        <li>
+            <a href="#tap-spec/tap"><strong>tap</strong> [id]
+            </a>
+            <ul>
+            <li>
+                id
+            </li>
+            <li>
+                <i>node</i>(U)
+            </li>
+            <li>
+                <i>src-node-connector</i>(U)
+            </li>
+            <li>
+                <i>sink-node-connector</i>(U)
+            </li>
+            <li>
+                <a href="#tap-spec/tap/mac-address-match"><strong><i>mac-address-match</i></strong>(U)
+                </a>
+                <ul>
+                <li>
+                    <i>type</i>(U)
+                </li>
+                <li>
+                    <i>value</i>(U)
+                </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#tap-spec/tap/ip-address-match"><strong><i>ip-address-match</i></strong>(U)
+                </a>
+                <ul>
+                <li>
+                    <i>type</i>(U)
+                </li>
+                <li>
+                    <i>value</i>(U)
+                </li>
+                </ul>
+            </li>
+            <li>
+                <i>traffic-match</i>(U)
+            </li>
+            <li>
+                <i>dl-type</i>(A)
+            </li>
+            <li>
+                <i>nw-proto</i>(A)
+            </li>
+            <li>
+                <i>tp-src</i>(A)
+            </li>
+            <li>
+                <i>tp-dst</i>(A)
+            </li>
+            </ul>
+        </li>
+        </ul>
+    </li>
+    </ul>
+    
+    <h2>Child nodes</h2>
+    
+    <h3>Direct children</h3>
+    <ul>
+    <li><strong><a href="#tap-spec">tap-spec</a>
+    </strong> (container)
+    <ul>
+        <li>configuration data: <strong>true</strong></li>
+    </ul>
+    </li>
+    </ul>
+    
+    <h3 id="tap-spec">
+        tap-spec
+    </h3>
+    <dl>
+      <dt>XML Path</dt>
+      <dd></dd>
+      <dt>Restconf path</dt>
+      <dd><code>tap:tap-spec</code></dd>
+    </dl>
+    <h3>Direct children</h3>
+    <ul>
+    <li><strong><a href="#tap-spec/tap">tap</a>
+    </strong> (list)
+    <ul>
+        <li>configuration data: <strong>true</strong></li>
+    </ul>
+    </li>
+    </ul>
+    
+    <h3>XML example</h3>
+    <pre>
+        &lt;tap-spec xmlns="urn:sdnhub:tutorial:odl:tap"&gt;<!-- Child nodes -->
+        <!-- tap -->
+            &lt!-- See <a href="#tap-spec/tap">definition</a>
+             for child nodes.  --&gt
+            &lt!-- This node could appear multiple times --&gt
+            &lt;tap xmlns="urn:sdnhub:tutorial:odl:tap"&gt;...&lt;/tap&gt;
+        
+        &lt;/tap-spec&gt;
+    </pre>
+    </h3>
+    <h3 id="tap-spec/tap">
+        tap-spec/tap
+    </h3>
+    <dl>
+      <dt>XML Path</dt>
+      <dd></dd>
+      <dt>Restconf path</dt>
+      <dd><code>tap:tap-spec/tap/{id}</code></dd>
+    </dl>
+    <h3>Direct children</h3>
+    <ul>
+    <li><strong>id</strong> (leaf)
+    <ul>
+        <li>configuration data: <strong>false</strong></li>
+        <li>mandatory: <strong>false</strong></li>
+    </ul>
+    </li>
+    <li><strong>node</strong> (leaf)
+    <ul>
+        <li>configuration data: <strong>true</strong></li>
+        <li>mandatory: <strong>true</strong></li>
+    </ul>
+    </li>
+    <li><strong>traffic-match</strong> (leaf)
+    <ul>
+        <li>configuration data: <strong>true</strong></li>
+        <li>mandatory: <strong>false</strong></li>
+    </ul>
+    </li>
+    <li><strong>dl-type</strong> (leaf)
+    <ul>
+        <li>configuration data: <strong>true</strong></li>
+        <li>mandatory: <strong>false</strong></li>
+    </ul>
+    </li>
+    <li><strong>nw-proto</strong> (leaf)
+    <ul>
+        <li>configuration data: <strong>true</strong></li>
+        <li>mandatory: <strong>false</strong></li>
+    </ul>
+    </li>
+    <li><strong>tp-src</strong> (leaf)
+    <ul>
+        <li>configuration data: <strong>true</strong></li>
+        <li>mandatory: <strong>false</strong></li>
+    </ul>
+    </li>
+    <li><strong>tp-dst</strong> (leaf)
+    <ul>
+        <li>configuration data: <strong>true</strong></li>
+        <li>mandatory: <strong>false</strong></li>
+    </ul>
+    </li>
+    <li><strong>src-node-connector</strong> (leaf-list)
+    <ul>
+        <li>configuration data: <strong>true</strong></li>
+    </ul>
+    </li>
+    <li><strong>sink-node-connector</strong> (leaf-list)
+    <ul>
+        <li>configuration data: <strong>true</strong></li>
+    </ul>
+    </li>
+    <li><strong><a href="#tap-spec/tap/mac-address-match">mac-address-match</a>
+    </strong> (container)
+    <ul>
+        <li>configuration data: <strong>true</strong></li>
+    </ul>
+    </li>
+    <li><strong><a href="#tap-spec/tap/ip-address-match">ip-address-match</a>
+    </strong> (container)
+    <ul>
+        <li>configuration data: <strong>true</strong></li>
+    </ul>
+    </li>
+    </ul>
+    
+    <h3>XML example</h3>
+    <pre>
+        &lt;tap xmlns="urn:sdnhub:tutorial:odl:tap"&gt;<!-- Child nodes -->
+        <!-- id -->
+            &lt;id xmlns="urn:sdnhub:tutorial:odl:tap"&gt;...&lt;/id&gt;
+        <!-- node -->
+            &lt;node xmlns="urn:sdnhub:tutorial:odl:tap"&gt;...&lt;/node&gt;
+        <!-- src-node-connector -->
+            &lt!-- This node could appear multiple times --&gt
+            &lt;src-node-connector xmlns="urn:sdnhub:tutorial:odl:tap"&gt;...&lt;/src-node-connector&gt;
+        <!-- sink-node-connector -->
+            &lt!-- This node could appear multiple times --&gt
+            &lt;sink-node-connector xmlns="urn:sdnhub:tutorial:odl:tap"&gt;...&lt;/sink-node-connector&gt;
+        <!-- mac-address-match -->
+            &lt!-- See <a href="#tap-spec/tap/mac-address-match">definition</a>
+             for child nodes.  --&gt
+            &lt;mac-address-match xmlns="urn:sdnhub:tutorial:odl:tap"&gt;...&lt;/mac-address-match&gt;
+        <!-- ip-address-match -->
+            &lt!-- See <a href="#tap-spec/tap/ip-address-match">definition</a>
+             for child nodes.  --&gt
+            &lt;ip-address-match xmlns="urn:sdnhub:tutorial:odl:tap"&gt;...&lt;/ip-address-match&gt;
+        <!-- traffic-match -->
+            &lt;traffic-match xmlns="urn:sdnhub:tutorial:odl:tap"&gt;...&lt;/traffic-match&gt;
+        <!-- dl-type -->
+            &lt;dl-type xmlns="urn:sdnhub:tutorial:odl:tap"&gt;...&lt;/dl-type&gt;
+        <!-- nw-proto -->
+            &lt;nw-proto xmlns="urn:sdnhub:tutorial:odl:tap"&gt;...&lt;/nw-proto&gt;
+        <!-- tp-src -->
+            &lt;tp-src xmlns="urn:sdnhub:tutorial:odl:tap"&gt;...&lt;/tp-src&gt;
+        <!-- tp-dst -->
+            &lt;tp-dst xmlns="urn:sdnhub:tutorial:odl:tap"&gt;...&lt;/tp-dst&gt;
+        
+        &lt;/tap&gt;
+    </pre>
+    </h3>
+    <h3 id="tap-spec/tap/mac-address-match">
+        tap-spec/tap/mac-address-match
+    </h3>
+    <dl>
+      <dt>XML Path</dt>
+      <dd></dd>
+      <dt>Restconf path</dt>
+      <dd><code>tap:tap-spec/tap/{id}/mac-address-match</code></dd>
+    </dl>
+    <h3>Direct children</h3>
+    <ul>
+    <li><strong>type</strong> (leaf)
+    <ul>
+        <li>configuration data: <strong>true</strong></li>
+        <li>mandatory: <strong>false</strong></li>
+    </ul>
+    </li>
+    <li><strong>value</strong> (leaf)
+    <ul>
+        <li>configuration data: <strong>true</strong></li>
+        <li>mandatory: <strong>false</strong></li>
+    </ul>
+    </li>
+    </ul>
+    
+    <h3>XML example</h3>
+    <pre>
+        &lt;mac-address-match xmlns="urn:sdnhub:tutorial:odl:tap"&gt;<!-- Child nodes -->
+        <!-- type -->
+            &lt;type xmlns="urn:sdnhub:tutorial:odl:tap"&gt;...&lt;/type&gt;
+        <!-- value -->
+            &lt;value xmlns="urn:sdnhub:tutorial:odl:tap"&gt;...&lt;/value&gt;
+        
+        &lt;/mac-address-match&gt;
+    </pre>
+    </h3>
+    <h3 id="tap-spec/tap/ip-address-match">
+        tap-spec/tap/ip-address-match
+    </h3>
+    <dl>
+      <dt>XML Path</dt>
+      <dd></dd>
+      <dt>Restconf path</dt>
+      <dd><code>tap:tap-spec/tap/{id}/ip-address-match</code></dd>
+    </dl>
+    <h3>Direct children</h3>
+    <ul>
+    <li><strong>type</strong> (leaf)
+    <ul>
+        <li>configuration data: <strong>true</strong></li>
+        <li>mandatory: <strong>false</strong></li>
+    </ul>
+    </li>
+    <li><strong>value</strong> (leaf)
+    <ul>
+        <li>configuration data: <strong>true</strong></li>
+        <li>mandatory: <strong>false</strong></li>
+    </ul>
+    </li>
+    </ul>
+    
+    <h3>XML example</h3>
+    <pre>
+        &lt;ip-address-match xmlns="urn:sdnhub:tutorial:odl:tap"&gt;<!-- Child nodes -->
+        <!-- type -->
+            &lt;type xmlns="urn:sdnhub:tutorial:odl:tap"&gt;...&lt;/type&gt;
+        <!-- value -->
+            &lt;value xmlns="urn:sdnhub:tutorial:odl:tap"&gt;...&lt;/value&gt;
+        
+        &lt;/ip-address-match&gt;
+    </pre>
+    </h3>
+    
+    
+    <h2>Augmentations</h2>
+    
+    <ul>
+    <li>
+        <h3 id="/tap:tap-spec/tap:tap/">
+        Target [<a href="#tap-spec/tap">/tap:tap-spec/tap:tap/</a>]</h3>
+            Status: <strong>CURRENT</strong>
+        <ul>
+        <strong><li>
+            leaf: dl-type
+        </li>
+        </strong>
+        <ul>
+        <li>
+            type: (urn:ietf:params:xml:ns:yang:1)uint16
+        </li>
+        </ul>
+        </ul>
+        <ul>
+        <strong><li>
+            leaf: nw-proto
+        </li>
+        </strong>
+        <ul>
+        <li>
+            type: (urn:ietf:params:xml:ns:yang:1)uint8
+        </li>
+        </ul>
+        </ul>
+        <ul>
+        <strong><li>
+            leaf: tp-src
+        </li>
+        </strong>
+        <ul>
+        <li>
+            type: (urn:ietf:params:xml:ns:yang:1)uint16
+        </li>
+        </ul>
+        </ul>
+        <ul>
+        <strong><li>
+            leaf: tp-dst
+        </li>
+        </strong>
+        <ul>
+        <li>
+            type: (urn:ietf:params:xml:ns:yang:1)uint16
+        </li>
+        </ul>
+        </ul>
+        
+        <h3>Example</h3>
+        <pre>
+        &lt;tap&gt;
+            &lt;id&gt;. . .&lt;/id&gt;
+            &lt;node&gt;. . .&lt;/node&gt;
+            &lt;src-node-connector&gt;. . .&lt;/src-node-connector&gt;
+            &lt;src-node-connector&gt;. . .&lt;/src-node-connector&gt;
+            &lt;src-node-connector&gt;. . .&lt;/src-node-connector&gt;
+            &lt;sink-node-connector&gt;. . .&lt;/sink-node-connector&gt;
+            &lt;sink-node-connector&gt;. . .&lt;/sink-node-connector&gt;
+            &lt;sink-node-connector&gt;. . .&lt;/sink-node-connector&gt;
+            &lt;mac-address-match&gt;
+                &lt;type&gt;. . .&lt;/type&gt;
+                &lt;value&gt;. . .&lt;/value&gt;
+            &lt;/mac-address-match&gt;
+            &lt;ip-address-match&gt;
+                &lt;type&gt;. . .&lt;/type&gt;
+                &lt;value&gt;. . .&lt;/value&gt;
+            &lt;/ip-address-match&gt;
+            &lt;traffic-match&gt;. . .&lt;/traffic-match&gt;
+            &lt;dl-type&gt;. . .&lt;/dl-type&gt;
+            &lt;nw-proto&gt;. . .&lt;/nw-proto&gt;
+            &lt;tp-src&gt;. . .&lt;/tp-src&gt;
+            &lt;tp-dst&gt;. . .&lt;/tp-dst&gt;
+        &lt;/tap&gt;
+        </pre>
+    </li>
+    </ul>
+    
+    
+    
+    
+  </body>
+</html>
